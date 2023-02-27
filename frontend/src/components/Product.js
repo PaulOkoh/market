@@ -30,7 +30,7 @@ const Product = (props) => {
 
 
   return (
-    <Card>
+    <div>
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
@@ -48,7 +48,7 @@ const Product = (props) => {
         <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
         )}
         </Card.Body>
-        </Card>
+        </div>
   );
 }
 export default Product;

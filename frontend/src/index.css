@@ -56,3 +56,7 @@ main {
   height: 60px;
 }
 
+.signin-container {
+  max-width: 500px;
+}
+
