@@ -124,7 +124,7 @@ const ProductPage = () => {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button onClick={addToCartHandler} variant="primary">Add to Cart</Button>
+                      <Button  onClick={addToCartHandler} variant="primary">Add to Cart</Button>
                     </div>
                   </ListGroup.Item>
                 )}

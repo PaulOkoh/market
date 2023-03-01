@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
 import { Store } from "../Store";
+import styled from "styled-components";
+
+ 
 
 
 
@@ -31,24 +34,35 @@ const Product = (props) => {
 
   return (
     <div>
-      <Link to={`/product/${product.slug}`}>
-        <img src={product.image} className="card-img-top" alt={product.name} />
-      </Link>
-      <Card.Body>
-        <Link to={`/product/${product.slug}`}>
-          <Card.Title>{product.name}</Card.Title>
-        </Link>
-        <Card.Text>{product.description}</Card.Text>
-        <Card.Text>${product.price}</Card.Text>
-        {product.countInStock === 0 ? (
-          <Button variant="light" disabled>
-            Out of Stock
-          </Button>
-        ) : (
-        <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
-        )}
+      <Card variant="flush" style={{ width: "16rem", height: '100%', margin: "8px", border: 'transparent' }}>
+        <Card.Body className="align-center">
+          <Link to={`/product/${product.slug}`}>
+              <img
+                src={product.image}
+                style={{ width: "150px" }}
+                className="card-img-top"
+                alt={product.name}
+              />
+          </Link>
+
+          <Link to={`/product/${product.slug}`}>
+            <Card.Title >{product.name}</Card.Title>
+          </Link>
+          {/* <Card.Text>${product.price}</Card.Text> */}
+          {/* {product.countInStock === 0 ? (
+            <Button variant="light" disabled>
+              Out of Stock
+            </Button>
+          ) : (
+            <Button onClick={() => addToCartHandler(product)}>
+              Add to cart
+            </Button>
+          )} */}
         </Card.Body>
-        </div>
+      </Card>
+    </div>
   );
 }
 export default Product;
+
+
