@@ -45,7 +45,7 @@ const HomePage = () => {
     <Helmet>
       <title>Market</title>
     </Helmet>
-      <h1>Featured</h1>
+      <h1></h1>
       <div className="products">
         {loading ? (
          <LoadingBox />
@@ -54,7 +54,7 @@ const HomePage = () => {
         ) : (
           <Row>
             {products.map((product) => (
-              <Col  key={product.id} sm={6} md={4} lg={3}> 
+              <Col  key={product.id} sm={6} md={4} lg={3}className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}

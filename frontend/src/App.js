@@ -27,12 +27,15 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark" position="fixed">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>devThriftMarket</Navbar.Brand>
+                <Navbar.Brand>
+                  <span>DevThrift</span>
+                  <span className="logo">Market</span>
+                </Navbar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
+              <Nav className="ml-auto">
                 <Link to="/cart" className="nav-link">
                   Cart
                   {cart.cartItems.length > 0 && (
@@ -44,6 +47,8 @@ function App() {
                     </Badge>
                   )}
                 </Link>
+              
+
                 {userInfo ? (
                   <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                     <LinkContainer to="/profile">
@@ -56,13 +61,13 @@ function App() {
                     <Link
                       className="dropdown-item"
                       to="#signout"
-                      onclick={signoutHandler}
+                      onClick={signoutHandler}
                     >
                       Sign Out
                     </Link>
                   </NavDropdown>
                 ) : (
-                  <Link>Sign In</Link>
+                  <Link to="/signin">Sign In</Link>
                 )}
               </Nav>
             </Container>
@@ -76,11 +81,13 @@ function App() {
               <Route path="/signin" element={<SignInPage />} />
               <Route path="/" element={<HomePage />} />
             </Routes>
-            
           </Container>
         </main>
         <footer>
-          <div className="text-center">&copy;2023</div>
+          <div className="text-center">
+            &copy;2023<span>DevThrift</span>
+            <span className="span">Market</span>{" "}
+          </div>
         </footer>
       </div>
     </Router>

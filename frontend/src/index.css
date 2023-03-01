@@ -20,6 +20,37 @@ header a {
   text-decoration: none;
 }
 
+.me-auto {
+  display: flex;
+  margin-right: auto;
+}
+
+.nav-link {
+  margin-left: 350px;
+}
+
+.navbar {
+  top: 0;
+}
+ .nav-cart {
+  display: flex;
+  justify-content: end;
+ }
+.logo {
+  color:#faebd7;
+}
+
+
+span {
+  font-size: 24px;
+  font-weight:bolder;
+  color: #e99d66;
+}
+.span {
+  color:#faebd7;
+
+}
+
 main {
   display: flex;
   flex: 1;
@@ -120,3 +151,5 @@ a {
     margin: 8px 0;
   }
 }
+
+

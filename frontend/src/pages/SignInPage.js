@@ -12,7 +12,7 @@ import { getError } from "../utils";
 
 
 const SignInPage = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectInUrl ? redirectInUrl: '/';
